@@ -102,6 +102,12 @@ module.exports = (env) => {
                 destination: distFolder
               },
 
+              // Images
+              {
+                source: 'src/Content/Images/*.*',
+                destination: path.join(distFolder, 'Content/Images')
+              },
+
               // Robots
               {
                 source: 'src/Content/robots.txt',

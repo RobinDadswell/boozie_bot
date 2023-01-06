@@ -9,20 +9,20 @@ render() {
 
     return (
       <div className={styles.header}>
-
+        Ramanix is a penis
         <div className={styles.right}>
           <IconButton
             className={styles.home}
             name={icons.HOME}
             to="/"
-            size={14}
+            size={30}
           />
           <IconButton
             className={styles.paintbrush}
             title="Colours List"
             name={icons.PAINTBRUSH}
             to="/colours"
-            size={14}
+            size={30}
           />
         </div>
       </div>

@@ -13,17 +13,14 @@ function IconButton(props) {
     kind,
     size,
     isSpinning,
-    isDisabled,
     ...otherProps
   } = props;
 
   return (
     <Link
       className={classNames(
-        className,
-        isDisabled && styles.isDisabled
+        className
       )}
-      isDisabled={isDisabled}
       {...otherProps}
     >
       <Icon
@@ -43,8 +40,7 @@ IconButton.propTypes = {
   kind: PropTypes.string,
   name: PropTypes.object.isRequired,
   size: PropTypes.number,
-  isSpinning: PropTypes.bool,
-  isDisabled: PropTypes.bool
+  isSpinning: PropTypes.bool
 };
 
 IconButton.defaultProps = {

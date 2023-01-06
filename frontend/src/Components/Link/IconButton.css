@@ -12,10 +12,6 @@
   &:hover {
     border: none;
     background-color: inherit;
-    color: var(--iconButtonHoverColor);
-  }
-
-  &.isDisabled {
-    color: var(--iconButtonDisabledColor);
+    color: yellow;
   }
 }

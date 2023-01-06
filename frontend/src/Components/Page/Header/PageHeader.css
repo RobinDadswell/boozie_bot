@@ -1,10 +1,11 @@
-.Header {
+.header {
+  background-color: #014421;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 0.5vmin);
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
   color: purple;
 }
 
@@ -12,13 +13,8 @@
 .home,
 .paintbrush {
   composes: link from '~Components/Link/Link.css';
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 30px;
   color: purple;
-  text-align: center;
   line-height: 60px;
 
   &:hover {

@@ -1,7 +1,6 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:3000",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.20.12",
@@ -17,23 +16,38 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.4.3",
     "babel-plugin-inline-classnames": "^2.0.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "classnames": "^2.3.2",
+    "connected-react-router": "^6.9.3",
     "css-loader": "^6.7.3",
     "filemanager-webpack-plugin": "^8.0.0",
+    "history": "^5.3.0",
+    "jquery": "^3.6.3",
+    "loadash": "^1.0.0",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.20",
     "postcss-color-function": "^4.1.0",
     "postcss-nested": "^6.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.1",
+    "react": "18.2.0",
+    "react-document-title": "^2.0.3",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "6.6.1",
     "react-scripts": "^5.0.1",
+    "react-table": "^7.8.0",
+    "redux": "^4.2.0",
+    "redux-actions": "^2.6.5",
+    "redux-batched-actions": "^0.5.0",
+    "redux-localstorage": "^0.4.1",
+    "redux-thunk": "^2.4.2",
     "styles-loader": "^4.0.1",
-    "web-vitals": "^2.1.4",
-    "webpack-livereload-plugin": "^3.0.2"
+    "web-vitals": "^3.1.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-livereload-plugin": "^3.0.2",
+    "webpack-serve": "^4.0.0"
   },
   "scripts": {
     "build": "webpack --config ./build/webpack.config.js",
@@ -43,8 +57,9 @@
     "watch": "webpack --watch --config ./build/webpack.config.js",
     "lint": "esprint check",
     "lint-fix": "esprint check --fix",
-    "serve": "webpack serve --config ./build.webpack.config.js"
+    "serve": "webpack serve --config ./build/webpack.config.js"
   },
+  "proxy": "http://localhost:3000",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -64,6 +79,9 @@
     ]
   },
   "devDependencies": {
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-livereload-plugin": "^3.0.2",
+    "webpack-serve": "^4.0.0"
   }
 }

@@ -11,11 +11,10 @@ class Link extends Component {
 
   onClick = (event) => {
     const {
-      isDisabled,
       onPress
     } = this.props;
 
-    if (!isDisabled && onPress) {
+    if (onPress) {
       onPress(event);
     }
   };
@@ -29,7 +28,6 @@ class Link extends Component {
       component,
       to,
       target,
-      isDisabled,
       noRouter,
       onPress,
       ...otherProps
@@ -69,14 +67,12 @@ class Link extends Component {
 
     if (el === 'button' || el === 'input') {
       linkProps.type = otherProps.type || 'button';
-      linkProps.disabled = isDisabled;
     }
 
     linkProps.className = classNames(
       className,
       styles.link,
-      to && styles.to,
-      isDisabled && 'isDisabled'
+      to && styles.to
     );
 
     const props = {
@@ -97,7 +93,6 @@ Link.propTypes = {
   component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   target: PropTypes.string,
-  isDisabled: PropTypes.bool,
   noRouter: PropTypes.bool,
   onPress: PropTypes.func
 };
