@@ -1,0 +1,33 @@
+.Header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 0.5vmin);
+  color: purple;
+}
+
+
+.home,
+.paintbrush {
+  composes: link from '~Components/Link/Link.css';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  color: purple;
+  text-align: center;
+  line-height: 60px;
+
+  &:hover {
+    color: pink;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
