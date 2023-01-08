@@ -1,25 +1,35 @@
-import React, { Component } from "react"
+import React, { useEffect, Component, useMemo } from "react"
 import ColourIndex from './ColourIndex'
 import { getAllColours } from "services/ColoursData";
+import PageHeader from "Components/Page/Header/PageHeader";
+import Table from 'Components/Table/Table'
 
-let colours;
-getAllColours().then(
-  (result) => { colours = result}
-);
+function ColourIndexConnector() {
+  const columns = useMemo(
+    () => [
+      {
+        Header: "Hex Code",
+        accessor: "hex_code",
+      },
+      {
+        Header: "Colour Name",
+        accessor: "colour_name"
+      }
+    ],
+    []
+  )
 
-class ColourIndexConnector extends Component {
-  
-  //
-  // Render
-
-  render() {
-    return (
-      <ColourIndex 
-        data={colours}
-        columns={colours.keys}
+  return (
+    <PageHeader />,
+      <Table 
+        data={getAllColours()}
+        columns={columns}
       />
-    );
-  }
+      /*<ColourIndex 
+      data={getAllColours()}
+      columns={columns}
+      />*/
+  );
 }
 
 export default ColourIndexConnector;

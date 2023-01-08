@@ -12,6 +12,9 @@ app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, '../_output/UI')));
 
+function log (message) {
+  console.log(Date.now() + " - " + message)
+}
 
 const colourdb = new sqlite3.Database('sqlitedb/colours.db', (err) => {
   if (err) {
@@ -27,7 +30,7 @@ app.get("/api/colours/:id", async (req, res, next) => {
 
 
 app.get("/api/colours", async (req, res, next) => {
-  console.log("getting all db colours");
+  log("getting all db colours");
   let result = await dbGetAllColours("SELECT hex_code, colour_name FROM colours")
   res.status(200).json(result)
 });
