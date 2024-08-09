@@ -18,5 +18,4 @@ jobs:
       - uses: sibiraj-s/action-eslint@v3
         with:
           eslint-args: '--ignore-path=.gitignore --quiet'
-          extensions: 'js,jsx,ts,tsx'
           annotations: true
